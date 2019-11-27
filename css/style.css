@@ -3,16 +3,55 @@ body{
     margin-right: 80px;
     background-color: darkslategrey;
     color: white;
-     font-family: Cambria;
+     font-family: Georgia;
 }
 h1,h3{
     color: turquoise;
     font-style: italic;
     font-style: normal;
     font-style: oblique;
+    text-transform: capitalize;
 }
 h4{
-    color: yellow;
+    color: rgb(23, 230, 75);
     font-style: italic;
 }
- 
+p{text-transform: capitalize;}
+p:first-child:first-letter {
+    color: rgb(21, 219, 14);
+    float: left;
+    font-family: Georgia;
+    font-size: 80px;
+    line-height: 40px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    
+  }
+em{
+    text-transform: uppercase;
+}
+
+  /* unvisited link */
+a:link {
+    color: red;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: yellow; 
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(105, 200, 255);
+    background-color: black;
+    text-decoration: underline;
+  }
+  
+  /* selected link */
+  a:active {
+    color: red;
+    background-color: wheat;
+  }
