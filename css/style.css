@@ -30,7 +30,7 @@ p::first-letter {
 }
   /* unvisited link */
 a:link {
-    color: red;
+    color: green;
     text-decoration: none;
     font-size: 11px;
     font-style: italic;
@@ -38,10 +38,10 @@ a:link {
   
   /* visited link */
   a:visited {
-    color: hsl(138, 89%, 52%); 
+    color: red;
     font-size: 11px;
     font-style: italic;
-  }
+  } 
   
   /* mouse over link */
   a:hover {
