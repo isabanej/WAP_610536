@@ -49,8 +49,8 @@ a:link {
   
   /* mouse over link */
   a:hover {
-    color:blue;
-    background-color: rgba(12, 247, 90, 0.842);
+    color:white;
+    background-color: blueviolet;
     text-decoration: underline;
     font-size: 11px;
     font-style: italic;
