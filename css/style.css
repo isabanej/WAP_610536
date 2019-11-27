@@ -3,7 +3,7 @@ body{
     margin-right: 80px;
     background-color: darkslategrey;
     color: white;
-     font-family: Georgia;
+    font-family: Georgia; 
 }
 h1,h3{
     color: turquoise;
@@ -27,31 +27,39 @@ p:first-child:first-letter {
     padding-right: 8px;
     padding-left: 3px;
     
-  }
-em{
+  } 
+.uppercase{
     text-transform: uppercase;
+    font-size: 13px; 
 }
-
   /* unvisited link */
 a:link {
     color: red;
     text-decoration: none;
+    font-size: 11px;
+    font-style: italic;
   }
   
   /* visited link */
   a:visited {
-    color: yellow; 
+    color: hsl(138, 89%, 52%); 
+    font-size: 11px;
+    font-style: italic;
   }
   
   /* mouse over link */
   a:hover {
-    color: rgb(105, 200, 255);
-    background-color: black;
+    color:blue;
+    background-color: rgba(12, 247, 90, 0.842);
     text-decoration: underline;
+    font-size: 11px;
+    font-style: italic;
   }
   
   /* selected link */
   a:active {
-    color: red;
-    background-color: wheat;
+    color: yellow;
+    background-color: black;
+    font-size: 11px;
+    font-style: italic;
   }
