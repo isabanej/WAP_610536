@@ -31,7 +31,7 @@ div.copyright {
     font-family: monospace; 
   }  
   ul {
-    list-style-image: url("https://github.com/isabanej/WAP_610536/blob/master/images/pie_icon.gif");
+    list-style-image: url("https://raw.githubusercontent.com/isabanej/WAP_610536/master/images/pie_icon.gif");
   } 
   hr{
       margin-top: 15px; 
