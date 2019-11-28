@@ -55,5 +55,10 @@ p.quotations{
 }
 q{
     font-style: italic;
-    
-} 
+    } 
+img{
+        border-radius: 10%;
+   }
+li.type{
+   list-style-type:none;
+}
