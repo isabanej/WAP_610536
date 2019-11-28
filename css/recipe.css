@@ -1,9 +1,9 @@
 body{
      
     background-color:white;
-    color:#404040 (red=64, green=64, blue=64) ;
+    color:#404040 ;
     font-size: 11pt ;
-    font-family: Georgia,Garamond;
+    font-family: Georgia;
     background-image: url(/images/silverware.jpg);
     background-attachment: fixed;
     background-repeat: space;
