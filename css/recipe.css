@@ -16,12 +16,16 @@ a:link {
       text-align: center;
   }
 h1,h2,h3,h4,h5,h6{
-    background-color: rgba(240, 238, 238, 0.815)   ;   
+    
     font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: underline;
     color:#A4A400 ;    
-    background-attachment: fixed;
+    background-attachment: fixed; 
+    letter-spacing: 0.25em;
 }  
+h1 span { 
+    background-color: rgba(240, 238, 238, 0.815)   ;   
+}
 div.copyright {
     text-align: right;
     font-family: monospace; 
