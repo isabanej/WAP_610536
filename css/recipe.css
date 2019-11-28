@@ -1,23 +1,43 @@
+body{
+     
+    background-color:white;
+    color:#404040 (red=64, green=64, blue=64) ;
+    font-size: 11px ;
+    font-family: Georgia,Garamond;
+    background-image: url(/images/silverware.jpg);
+    background-attachment: fixed;
+    background-repeat: space;
+    
+}
+a:link {
+    color: #A4A400; 
+  } 
+  .centering{
+      text-align: center;
+  }
 h1,h2,h3,h4,h5,h6{
- background-color: rgba(240, 238, 238, 0.815)   ;   
- font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-decoration: underline;
-color:#A4A400 ; 
-/*
- The page's main heading is aligned to the center of the page body,
- and uses a 22pt bold font. Other headings on the page are
-  leftaligned and appear in an 18pt normal font. */
-   
+    background-color: rgba(240, 238, 238, 0.815)   ;   
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    color:#A4A400 ;    
+    background-attachment: fixed;
 }  
 div.copyright {
     text-align: right;
-  } 
+    font-family: monospace; 
+  }  
   ul {
     list-style-image: url("/images/pie_icon.gif");
+  } 
+  hr{
+      margin-top: 15px; 
+      
   }
-/*
 
-The overall page's body should have a white background. Text in the body should have a foreground color of
-#404040 (red=64, green=64, blue=64) and use an 11pt font. The font families for page text are Georgia,
-Garamond, or any serif font available on the system. Any links on the page should use the color #A4A400
-(red=164, green=164, blue=0), matching the color of the page headings.
+  /* Create two equal columns that floats next to each other */
+.columnlink {
+    float: left;
+    width: 20%;
+    padding: 10px; 
+    box-sizing: border-box;
+  }
