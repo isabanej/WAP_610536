@@ -48,3 +48,10 @@ div.copyright {
     font-weight: 100; 
     text-decoration: underline;
 }
+p.quotations{
+    background-color: #FFFFA8 ;
+}
+q{
+    font-style: italic;
+    
+} 
