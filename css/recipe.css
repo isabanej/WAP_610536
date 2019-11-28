@@ -59,6 +59,7 @@ q{
 img{
         border-radius: 10%;
    }
-li.type{
-   list-style-type:none;
+ol.typeList{  
+   list-style: none;
+   margin-left: -40px;
 }
