@@ -1,3 +1,119 @@
-body{
-    background-image: url("images/background.png");
+ body{
+     margin: auto; 
+ }
+ .mainsection { 
+    background: url('../images/background.png');
+    font-size: 8pt ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+ 
+.bannerbg {
+    height: 100%;
+    width: 100%;
+    background: url('../images/bannerbg.png');  
+    text-align: center; 
+}
+
+.maincontentbody {
+    border: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: rgb(122, 117, 117);
+    height: 1200px;
+    margin: 0px 10% 0px 10%;
+}
+
+.right-section {
+    width: 30%;
+    height: 100%;
+    background: rgb(122, 165, 81);
+    float: right;
+}
+
+.left-section {
+    /* width: 100%; */
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.top-flex {
+    flex: 9;
+}
+
+.bottom-flex {
+    height: 40px;
+    background: rgb(122, 165, 81);
+    text-align: center;
+    margin-top: 80px; 
+}
+
+.dl-padd {
+    padding: 0px 5% 0px 5%;
+}
+.shadowcenter{
+    text-align: center;
+    text-shadow: 3px 3px  #999999;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+   }
+.rotten {
+    height: 85px;
+    width: 100%;
+    background: url('../images/rbg.png');
+}
+
+.flex-box {
+    display: flex;
+    /* justify-content: ; */
+    align-items: flex-start;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.image-box {
+    border: solid; 
+    border-radius: 10px;
+    border-color: rgb(122, 117, 117);
+    flex: 1;
+    padding: 10px;
+    background-color: #E8DC9B; 
+    text-align: left;
+}
+
+.gap {
+    width: 10px;
+}
+
+.inner-right {
+    width: 47%;
+    height: auto;
+    float: right;
+    padding: 0px 8px 0px 8px;
+}
+
+.inner-left {
+    width: 47%;
+    height: 200px;
+    padding: 0px 8px 0px 8px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.mtext {
+    color: red;
+    font-size: 72px;
+    font-weight: bold;  
+}
+.validation-image {
+    float: right;
+    width: 10%;
+    margin-left: auto;  
+    position: relative;
+    right: 0px;
+    bottom:  65px;
+    height: 80px;
+      
+    }
