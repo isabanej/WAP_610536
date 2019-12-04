@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title> Servlet Quiz</title>
+    <style>
+        .answer {
+            color: black;
+        }
+
+        .question {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> Servlet Quiz</h2>
+    <ol>
+        <li>
+            <p class="question">What is the difference between a web server and a web container?</p>
+            <p class="answer">
+                What is the difference between a web server and a web container?
+                Web Server is mostly designed to serve static content, though most Web Servers have plugins to support
+                scripting languages like Perl, PHP, ASP, JSP etc. through which these servers can generate dynamic HTTP
+                content.Web Server is designed to serve HTTP Content. It can be provided other protocol support such as
+                RMI/RPC
+
+                A web server refers to a server which normally listens at port 80 and serves up html pages, images,
+                etc... The html pages are usually static pages unless they contain JavaScript. An application which uses
+                servlets and jsps requires an application server such as Tomcat, WebSphere, WebLogic, etc.... These
+                application servers include a "web container".
+
+                Basically the "web container" is software which implements the "servlet contract". If you look at the
+                api documentation for javax.servlet and javax.servlet.http, you will see that the most important objects
+                (e.g. ServletRequest, ServletResponse, Servlet, HttpSession, etc...) are interfaces not classes. The
+                reason for this is that each application server implements its own classes which implement these
+                interfaces.
+            </p>
+        </li>
+
+        <li>
+            <p class="question">What is a servlet?</p>
+            <p class="answer">
+                A servlet is a Java programming language class used to extend the capabilities of servers that host
+                applications accessed by means of a request-response programming model. Although servlets can respond to
+                any type of request, they are commonly used to extend the applications hosted by web servers. For such
+                applications, Java Servlet technology defines HTTP-specific servlet classes. The javax.servlet and
+                javax.servlet.http packages provide interfaces and classes for writing servlets. All servlets must
+                implement the Servlet interface, which defines lifecycle methods. When implementing a generic service,
+                you can use or extend the GenericServlet class provided with the Java Servlet API. The HttpServlet class
+                provides methods, such as doGet and doPost, for handling HTTP-specific services.
+
+                A servlet is simply a class which responds to a particular type of network request - most commonly an
+                HTTP request. Basically servlets are usually used to implement web applications - but there are also
+                various frameworks which operate on top of servlets (e.g. Struts) to give a higher-level abstraction
+                than the "here's an HTTP request, write to this HTTP response" level which servlets provide.
+
+                Servlets run in a servlet container which handles the networking side (e.g. parsing an HTTP request,
+                connection handling etc). One of the best-known open source servlet containers is Tomcat.
+            </p>
+        </li>
+        <li>
+            <p class="question">How do web servers and web containers interact with servlets?
+            </p>
+            <p class="answer">
+                <p class="answer">It is a collection of classes and interfaces that we can use to develop a servlet.
+                    These classes and interfaces
+                    are packaged in the javax.servlet and javax.servlet.http packages.
+                </p>Whenever a client sends a request to the J2EE application server for a particular servlet,
+
+                the J2EE Application server passes the request to the Web container.
+                p class="answer">The Web container checks whether an instance of the requested servlet exists.
+                If the servlet instance exists then the Web container delegates the request to the servlet, which
+                process the client request and sends back the response.
+                In case the servlet instance does not exist, the Web container locates and loads the servlet class.
+                The Web container then creates an instance of the servlet and initializes it. The servlet instance
+                starts processing the request after initialization.
+                The Web container passes the response generated by the servlet to the client.
+                The Web container manages a servlet by invoking various life cycle methods. These methods are defined in
+                the Servlet API.
+            </p>
+
+        </li>
+        <li>
+            <p class="question">Who creates request objects?
+            </p>
+            <p class="answer">The request object is an instance of a javax.servlet.http.HttpServletRequest object.
+                Each time a client requests a page the JSP engine creates a new object to represent that request.</p>
+        </li>
+        <li>
+            <p class="question">What are the states in the servlet lifecycle?</p>
+            <p class="answer">The javax.servlet.Servlet interface defines the life cycle methods of servlet such as
+                init(), service() and destroy().
+                The Web container invokes the init(), service() and destroy() methods of a servlet during its life
+                cycle.
+                The sequence in which the Web container calls the life cycle methods of a servlet is:</p>
+        </li>
+        The Web container loads the servlet class and creates one or more instances of the servlet class.
+        The Web container invokes init() method of the servlet instance during initialization of the servlet. The init()
+        method is invoked only once in the servlet life cycle.
+        The Web container invokes the service() method to allow a servlet to process a client request.
+        The service() method processes the request and returns the response back to the Web container.
+        The servlet then waits to receive and process subsequent requests
+        The Web container calls the destroy() method before removing the servlet instance from the service.
+        The destroy() method is also invoked only once in a servlet life cycle.
+        </li>
+        <li>
+            <p class="question">Who calls init and when?</p>
+            <p class="answer">
+                A servlet's init(ServletConfig) method is called by the server immediately after the server constructs
+                the servlet's instance.
+                Depending on the server and its configuration, this can be at any of these times:
+                When the server starts
+                When the servlet is first requested, just before the service() method is invoked
+                At the request of the server administrator
+                In any case, init() is guaranteed to be called before the servlet handles its first request.
+                The init() method is typically used to perform servlet initialization--creating or loading objects that
+                are used by the servlet in the handling of its requests.
+            </p>
+        </li>
+        <li>
+            <p class="question">Which of init, service, and doGet should you override?</p>
+            <p class="answer">
+                init()- we can Possibly override If you have initialization code (connecting to a database) then you
+                will override the init() method
+                service()-No, Very unlikely. We should NOT override the service() method.
+                Your job is to override the doGet(), doPost() methods and let the service() implemenation from
+                HTTPServlet worry about calling the right one
+                doGet() and doPost()- we should Always override at least ONE of doGet() or doPost()
+                You can call each other to cover both options, for example doGet() could call doPost() method which has
+                the code
+            </p>
+        </li>
+
+        <li>
+            <p class="question">In what sense are servlets multi-threaded?</p>
+            <p class="answer">
+                A Java servlet container/web server is typically multithreaded.
+                That means, that multiple requests to the same servlet may be executed at the same time.
+                Therefore, you need to take concurrency into consideration when you implement your servlet.
+                Servlets are intrinsically multithreaded.This means a single instance can be accessed by more than one
+                thread.
+            </p>
+
+        </li>
+        <li>
+            <p class="question">What are the implications of this for servlet instance variables? </p>
+            <p class="answer">
+                If you absolutely can't deal with synchronizing, you can declare that your servlet &amp;quot;
+                implements SingleThreadModel&amp;quot;. This empty interface tells the web server to only send one
+                client request at a time into your servlet.
+                From the JavaDoc: &amp;quot;If the target servlet is flagged with this interface, the servlet programmer
+                is guaranteed that no two threads will execute concurrently the service method of that servlet.
+                This guarantee is ensured by maintaining a pool of servlet instances for each such servlet, and
+                dispatching each service call to a free servlet.
+                In essence, if the servlet implements this interface, the servlet will be thread safe.&amp;quot;
+                Note that this is not an ideal solution, since performance may suffer (depending on the size of the
+                instance pool), plus it's more difficult to share data across instances than within a single instance.
+            </p>
+        </li>
+
+    </ol>
+
+
+
+
+
+
+
+</body>
+
+</html>
